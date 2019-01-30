@@ -12,20 +12,21 @@ class MsgBoard extends React.Component {
 	}
 
     handleHTTPErrors(response) {
+	    console.log('Response: ');
+        console.log(response);
         if (!response.ok) throw Error(response.status + ': ' + response.statusText);
         return response;
     }
 
     componentDidMount() {
-	    console.log('ComponentDidMount is Executed');
         fetch('http://localhost:3003/msgs')
             .then(response=> this.handleHTTPErrors(response))
             .then(response=> response.json())
             .then(result=> {
+                console.log('logging response from json server');
                 console.log(result);
                 this.setState({
-                    msg: result.msg,
-                    name: result.name,
+                    messages: result
                 });
             })
             .catch(error=> {
@@ -44,7 +45,7 @@ class MsgBoard extends React.Component {
 
         // update state var
         this.setState({
-            messages: msgs
+           messages: msgs
         });
 
         // update back-end data
@@ -55,7 +56,9 @@ class MsgBoard extends React.Component {
             },
             body: JSON.stringify(message)
         })
-            .then(response => this.handleHTTPErrors(response))
+            .then(response => {
+                this.handleHTTPErrors(response);
+            })
             .catch(error => {
                 console.log(error);
             });

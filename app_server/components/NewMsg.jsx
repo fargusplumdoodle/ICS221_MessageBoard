@@ -4,7 +4,7 @@ class NewMsg extends React.Component {
     constructor(props) {
         super(props);
         this.handleText = this.handleText.bind(this);
-        this.addMessage = this.handleText.bind(this);
+        this.addMessage = this.addMessage.bind(this);
         this.state = {
             name: '',
             msg: ''
@@ -23,7 +23,7 @@ class NewMsg extends React.Component {
         }
     }
 
-    addMessage() {
+    addMessage(event) {
         event.preventDefault();
 
         //save state vars to local

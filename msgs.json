@@ -11,24 +11,14 @@
       "msg": "ICS 221 is fun!"
     },
     {
-      "id": 2,
-      "name": "John",
-      "msg": "Howdy!"
+      "name": "Fargus",
+      "msg": "Everythings on fiiireeee!!!!",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "Barb",
-      "msg": "Hi"
-    },
-    {
-      "id": 4,
-      "name": "Frank",
-      "msg": "Who's tired?"
-    },
-    {
-      "id": 5,
-      "name": "Sarah",
-      "msg": "I heart React"
+      "name": "Fargus",
+      "msg": "WOOOOOOOOOO",
+      "id": 3
     }
   ]
 }
