@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 //adding mongodb connection via mongoose
-require('./app_server/db');
+require('./api_server/db');
 
 // adding appRouter
 const appRouter = require('./app_server/routes/app_router');
