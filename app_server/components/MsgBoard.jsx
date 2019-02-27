@@ -19,7 +19,7 @@ class MsgBoard extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3003/msgs')
+        fetch('http://localhost:3000/api/v1/msgs')
             .then(response=> this.handleHTTPErrors(response))
             .then(response=> response.json())
             .then(result=> {
@@ -35,7 +35,7 @@ class MsgBoard extends React.Component {
     }
 
     addMessage(message){
-        let msgs = this.state.messages;
+        /*let msgs = this.state.messages;
 
         // add id attribute
         message.id = msgs.length;
@@ -46,22 +46,28 @@ class MsgBoard extends React.Component {
         // update state var
         this.setState({
            messages: msgs
-        });
-
+        });*/
         // update back-end data
-        fetch('http://localhost:3003/msgs', {
+        fetch('http://localhost:3000/api/v1/msgs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(message)
         })
-            .then(response => {
-                this.handleHTTPErrors(response);
-            })
-            .catch(error => {
-                console.log(error);
+        .then(response => this.handleHTTPErrors(response))
+        .then(result => result.json())
+        .then(result => {
+            console.log('before set state' +  this.state.messages);
+            this.setState({
+                messages:
+                    [result].concat(this.state.messages)
             });
+            console.log('after set state' +  this.state.messages);
+        })
+        .catch(error => {
+            console.log(error);
+        });
 	}
 
 	render(){
