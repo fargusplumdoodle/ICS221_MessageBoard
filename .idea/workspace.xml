@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d98a867-5d1b-4545-aeb7-a8c201c60e33" name="Default Changelist" comment="">
+    <list default="true" id="5d98a867-5d1b-4545-aeb7-a8c201c60e33" name="Default Changelist" comment="now successfull api get/post requests">
+      <change afterPath="$PROJECT_DIR$/api_server/controllers/msg-api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_server/routes/api_router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="543">
@@ -25,7 +26,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api_server/routes/api_router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api_server/controllers/msg-api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="36" selection-start-column="36" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,6 +82,8 @@
         <option value="$PROJECT_DIR$/app_server/components/MsgBoard.jsx" />
         <option value="$PROJECT_DIR$/app_server/components/NewMsg.jsx" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/api_server/api_server/api_router.js" />
+        <option value="$PROJECT_DIR$/api_server/controllers/msg-api.js" />
       </list>
     </option>
   </component>
@@ -96,6 +124,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -133,7 +162,7 @@
       <workItem from="1548362069406" duration="282000" />
       <workItem from="1548865271558" duration="14137000" />
       <workItem from="1551304416314" duration="498000" />
-      <workItem from="1551306758851" duration="547000" />
+      <workItem from="1551306758851" duration="1328000" />
     </task>
     <task id="LOCAL-00001" summary="finished message board component with addMessage method">
       <created>1548871698931</created>
@@ -156,11 +185,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548872465324</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added api to router">
+      <created>1551307332224</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551307332224</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29541000" />
+    <option name="totallyTimeSpent" value="30322000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -175,7 +211,7 @@
     <frame x="75" y="1078" width="1600" height="902" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09765378" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09765378" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -190,7 +226,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.40409482" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.3182406" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3182406" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -204,7 +240,9 @@
     <MESSAGE value="finished message board component with addMessage method" />
     <MESSAGE value="added client side rendering" />
     <MESSAGE value="added webpack" />
-    <option name="LAST_COMMIT_MESSAGE" value="added webpack" />
+    <MESSAGE value="added api to router" />
+    <MESSAGE value="now successfull api get/post requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="now successfull api get/post requests" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app_server/views/error.pug">
@@ -320,6 +358,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api_server/routes/api_router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api_server/controllers/msg-api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
         </state>
       </provider>
     </entry>
