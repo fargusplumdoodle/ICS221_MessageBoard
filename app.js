@@ -9,6 +9,8 @@ require('./api_server/db');
 
 // adding appRouter
 const appRouter = require('./app_server/routes/app_router');
+// adding apiRouter
+const apiRouter = require('./api_server/routes/api_router');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -27,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', appRouter);
 app.use('/users', usersRouter);
+app.use('/api/v1', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
