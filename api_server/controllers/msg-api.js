@@ -16,7 +16,14 @@ const getAllMessagesOrderedByLastPosted = (req, res) => {
 };
 // POST Request Handler
 const addNewMessage = (req, res) => {
-    res.status(200).send('Successful API POST Request');
+    messageModel
+        .create( req.body, (err, message) => {
+            if (err) {
+                res.status(400).json(err);
+            } else {
+                res.status(201).json(message);
+            }
+        });
 };
 
 module.exports = {
