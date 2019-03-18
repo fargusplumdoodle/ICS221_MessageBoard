@@ -14,4 +14,4 @@ mongoose.connection.on('disconnected', () => {
 	console.log('Mongoose disconnected');
 });
 
-require('../app_server/models/message_schema');
+require('./models/message_schema');
