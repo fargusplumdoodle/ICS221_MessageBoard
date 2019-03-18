@@ -1,4 +1,5 @@
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: path.join(__dirname, 'client_side', 'app.jsx'),
@@ -6,6 +7,9 @@ module.exports = {
         path: path.join(__dirname, '/public/javascripts/'),
         filename: 'bundle.js'
     },
+    plugins: [
+    	new Dotenv()
+    ],
     module: {
         rules: [
             {

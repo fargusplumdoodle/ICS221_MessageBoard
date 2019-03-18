@@ -19,7 +19,7 @@ class MsgBoard extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/api/v1/msgs')
+        fetch(`${process.env.API_URL}`)
             .then(response=> this.handleHTTPErrors(response))
             .then(response=> response.json())
             .then(result=> {
@@ -48,7 +48,7 @@ class MsgBoard extends React.Component {
            messages: msgs
         });*/
         // update back-end data
-        fetch('http://localhost:3000/api/v1/msgs', {
+        fetch(`${process.env.API_URL}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

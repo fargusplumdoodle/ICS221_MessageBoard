@@ -25,7 +25,7 @@ let msgs = [{
 }];
 
 const getMessages = (req, res) => {
-    fetch('http://localhost:3000/api/v1/msgs')
+    fetch(`${process.env.API_URL}`)
         .then(response=> handleHTTPErrors(response))
         .then(result=> result.json())
         .then(result=> {
