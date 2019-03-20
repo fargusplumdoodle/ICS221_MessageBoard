@@ -28,6 +28,11 @@ const userSchema = new mongoose.Schema({
     },
 });
 
+userSchema.methods.verifyPassword = function(inputedPlainTextPassword) {
+    const hashedPassword = this.password;
+    return bcrypt.compare(inputedPlainTextPassword, hashedPassword);
+};
+
 userSchema.pre('save', function(next) {
 // hash and salt password
     bcrypt.hash(this.password, 10)

@@ -32,6 +32,28 @@ const loginUser = (req, res) => {
     res.status(200).send('Successful API Login User GET Request');
 };
 
+passport.use(new BasicStrategy(
+    (email, password, done) => {
+        userModel
+            .findOne({
+                email: email
+            }, (err, user) => {
+                if (err) return done(err);
+// username wasn't found
+                if (!user) return done(null, false);
+// user was found, see if it's a valid password
+                user.verifyPassword(password)
+                    .then(result => {
+                        if (result) return done(null, user);
+                        else return done(null, false);
+                    })
+                    .catch(error => {
+                        console.log('Error verifying Password: ' + error);
+                    });
+            });
+    }
+));
+
 module.exports = {
     loginUser,
     registerNewUser
