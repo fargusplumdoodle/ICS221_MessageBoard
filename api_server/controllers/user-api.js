@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const userModel = mongoose.model('user');
+const passport = require('passport');
+const BasicStrategy = require('passport-http').BasicStrategy;
 
 const registerNewUser = (req, res) => {
 //     res.status(200).send('Successful API New User POST Request');
