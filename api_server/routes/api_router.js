@@ -6,7 +6,9 @@ const msgAPIController = require('../controllers/msg-api');
 const userAPIController = require('../controllers/user-api');
 
 router.post('/users', userAPIController.registerNewUser);
-router.get('/users/login', userAPIController.loginUser);
+router.get('/users/login',
+    passport.authenticate('basic', {session:false}),
+    userAPIController.loginUser);
 
 router.route('/msgs')
     .get(msgAPIController.getAllMessagesOrderedByLastPosted)

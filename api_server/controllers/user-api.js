@@ -3,6 +3,7 @@ const userModel = mongoose.model('user');
 const passport = require('passport');
 const BasicStrategy = require('passport-http').BasicStrategy;
 
+
 const registerNewUser = (req, res) => {
 //     res.status(200).send('Successful API New User POST Request');
     userModel
@@ -31,7 +32,7 @@ const registerNewUser = (req, res) => {
 };
 
 const loginUser = (req, res) => {
-    res.status(200).send('Successful API Login User GET Request');
+    res.status(200).json({"api-msg": "Successfully Authenticated"});
 };
 
 passport.use(new BasicStrategy(

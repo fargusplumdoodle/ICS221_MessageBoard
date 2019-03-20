@@ -1,9 +1,6 @@
 const React = require('react');
 
 const MsgList= (props) => {
-    props.messages.map( (message, index ) =>
-        console.log(message.name + '     ' + index)
-    );
     return (
         <table className="table table-striped table-bordered">
             <thread>
