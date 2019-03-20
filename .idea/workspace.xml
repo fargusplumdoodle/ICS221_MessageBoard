@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d98a867-5d1b-4545-aeb7-a8c201c60e33" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_server/controllers/user-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_server/controllers/user-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_server/routes/api_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_server/routes/api_router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_server/components/MsgBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app_server/components/MsgBoard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_server/components/MsgList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app_server/components/MsgList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/bundle.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -57,8 +54,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app_server/components/MsgBoard.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="431">
-                  <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+                <state relative-caret-position="130">
+                  <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
                 </state>
               </provider>
             </entry>
@@ -70,13 +67,22 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app_server/components/Login.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1031">
-                  <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+                <state relative-caret-position="555">
+                  <caret line="82" column="41" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app_server/components/MsgList.jsx">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="45">
@@ -115,7 +121,6 @@
         <option value="$PROJECT_DIR$/app_server/components/Footer.jsx" />
         <option value="$PROJECT_DIR$/app_server/client_side/app.jsx" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app_server/routes/app_router.js" />
         <option value="$PROJECT_DIR$/../index.html" />
         <option value="$PROJECT_DIR$/app_server/components/NewMsg.jsx" />
@@ -128,11 +133,12 @@
         <option value="$PROJECT_DIR$/api_server/models/user_schema.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app_server/components/Header.jsx" />
-        <option value="$PROJECT_DIR$/app_server/components/Login.jsx" />
         <option value="$PROJECT_DIR$/api_server/routes/api_router.js" />
         <option value="$PROJECT_DIR$/api_server/controllers/user-api.js" />
-        <option value="$PROJECT_DIR$/app_server/components/MsgBoard.jsx" />
         <option value="$PROJECT_DIR$/app_server/components/MsgList.jsx" />
+        <option value="$PROJECT_DIR$/app_server/components/Login.jsx" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app_server/components/MsgBoard.jsx" />
       </list>
     </option>
   </component>
@@ -159,19 +165,7 @@
             <path>
               <item name="ics221-mb" type="b2602c69:ProjectViewProjectNode" />
               <item name="ics221-mb" type="462c0819:PsiDirectoryNode" />
-              <item name="api_server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ics221-mb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ics221-mb" type="462c0819:PsiDirectoryNode" />
-              <item name="api_server" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ics221-mb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ics221-mb" type="462c0819:PsiDirectoryNode" />
-              <item name="api_server" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="app_server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,7 +222,7 @@
       <workItem from="1551310365439" duration="927000" />
       <workItem from="1552930264597" duration="2888000" />
       <workItem from="1552937164089" duration="3748000" />
-      <workItem from="1553096296710" duration="7612000" />
+      <workItem from="1553096296710" duration="10026000" />
     </task>
     <task id="LOCAL-00001" summary="finished message board component with addMessage method">
       <created>1548871698931</created>
@@ -321,11 +315,25 @@
       <option name="project" value="LOCAL" />
       <updated>1553100458964</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Task 9 complete, login and post messages possible">
+      <created>1553109234532</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1553109234532</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Task 10 complete, registration page now accessable">
+      <created>1553111070646</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1553111070646</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47564000" />
+    <option name="totallyTimeSpent" value="49978000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -354,7 +362,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.46989527" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.46947083" />
       <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.3182406" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -380,7 +388,9 @@
     <MESSAGE value="Task 6 completed" />
     <MESSAGE value="Task 7 complete, authentication works with messages" />
     <MESSAGE value="Task 8 complete, added login to front end" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 8 complete, added login to front end" />
+    <MESSAGE value="Task 9 complete, login and post messages possible" />
+    <MESSAGE value="Task 10 complete, registration page now accessable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 10 complete, registration page now accessable" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app_server/views/error.pug">
@@ -405,13 +415,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.jsx" />
     <entry file="file://$PROJECT_DIR$/app_server/client_side/app.jsx" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client_side/app.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -447,13 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/views/layout.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -530,24 +526,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/components/Login.jsx">
+    <entry file="file://$PROJECT_DIR$/app_server/components/MsgList.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1031">
-          <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client_side/Registration.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-829">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/views/layout.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/components/Login.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_server/components/MsgBoard.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/components/MsgList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="130">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
         </state>
       </provider>
     </entry>

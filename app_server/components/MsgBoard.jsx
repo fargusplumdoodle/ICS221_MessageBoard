@@ -11,6 +11,7 @@ class MsgBoard extends React.Component {
         this.addMessage = this.addMessage.bind(this);
         this.login = this.login.bind(this);
         this.register = this.register.bind(this);
+        this.addNewUser = this.addNewUser.bind(this);
 
         this.state = {
             messages: this.props.messages,
@@ -27,6 +28,38 @@ class MsgBoard extends React.Component {
                 password: ''
             }
         }
+    }
+
+    addNewUser(userDetails){
+        console.log('Add user called' + JSON.stringify(userDetails));
+        fetch(`${process.env.API_URL}/users`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userDetails)
+        })
+        .then(response=> {
+            if (response.status === 201) {
+                console.log('Successful registration');
+                // User successfully registered
+                // disable the Registration Form
+                this.setState({
+                    registrationForm: false,
+                    registrationFail: false
+                });
+            } else {
+                // Some Error or User already exists
+                console.log('Faileeeed registration');
+                this.setState({
+                    registrationFail: true
+                });
+            }
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
     }
 
     login(userCredentials) {
