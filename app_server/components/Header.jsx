@@ -2,7 +2,10 @@ const React = require('react');
 
 const Header = (props) => {
 	return (
-	    <h1>This is a message board!</h1>
+		<div>
+            <h1>Flat earth society message board!</h1>
+            <br/>
+		</div>
 	);
 };
 

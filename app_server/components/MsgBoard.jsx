@@ -1,18 +1,22 @@
 const React = require('react');
 const MsgList = require('./MsgList.jsx');
 const NewMsg = require('./NewMsg.jsx');
+const Login = require('./Login.jsx');
 
 class MsgBoard extends React.Component {
-	constructor(props){
-		super(props);
-		this.addMessage = this.addMessage.bind(this);
-		this.state = {
-			messages: this.props.messages,
-		}
-	}
+    constructor(props) {
+        super(props);
+        this.addMessage = this.addMessage.bind(this);
+        this.state = {
+            messages: this.props.messages,
+            loginForm: true,
+            loginAttempts: 3,
+            loginFail: false
+        }
+    }
 
     handleHTTPErrors(response) {
-	    console.log('Response: ');
+        console.log('Response: ');
         console.log(response);
         if (!response.ok) throw Error(response.status + ': ' + response.statusText);
         return response;
@@ -20,21 +24,21 @@ class MsgBoard extends React.Component {
 
     componentDidMount() {
         fetch(`${process.env.API_URL}/msgs`)
-            .then(response=> this.handleHTTPErrors(response))
-            .then(response=> response.json())
-            .then(result=> {
+            .then(response => this.handleHTTPErrors(response))
+            .then(response => response.json())
+            .then(result => {
                 console.log('logging response from json server');
                 console.log(result);
                 this.setState({
                     messages: result
                 });
             })
-            .catch(error=> {
+            .catch(error => {
                 console.log('Fetch API Error: ' + error);
             });
     }
 
-    addMessage(message){
+    addMessage(message) {
         /*let msgs = this.state.messages;
 
         // add id attribute
@@ -55,29 +59,40 @@ class MsgBoard extends React.Component {
             },
             body: JSON.stringify(message)
         })
-        .then(response => this.handleHTTPErrors(response))
-        .then(result => result.json())
-        .then(result => {
-            console.log('before set state' +  this.state.messages);
-            this.setState({
-                messages:
-                    [result].concat(this.state.messages)
+            .then(response => this.handleHTTPErrors(response))
+            .then(result => result.json())
+            .then(result => {
+                console.log('before set state' + this.state.messages);
+                this.setState({
+                    messages:
+                        [result].concat(this.state.messages)
+                });
+                console.log('after set state' + this.state.messages);
+            })
+            .catch(error => {
+                console.log(error);
             });
-            console.log('after set state' +  this.state.messages);
-        })
-        .catch(error => {
-            console.log(error);
-        });
-	}
+    }
 
-	render(){
-	    return (
-	    	<div>
-                <NewMsg addMsgCallback={this.addMessage}/>
+    render() {
+        let form;
+        if (this.state.loginForm) {
+            form = <Login registerCallback={this.register}
+                          loginCallback={this.login}
+                          loginFail={this.state.loginFail}
+                          loginAttempts={this.state.loginAttempts}
+            />
+        } else {
+            form = <NewMsg addMsgCallback={this.addMessage}/>
+        }
+
+        return (
+            <div>
+                {form}
                 <MsgList messages={this.state.messages}/>
-			</div>
-		)
-	}
+            </div>
+        );
+    }
 }
 
 module.exports = MsgBoard;
