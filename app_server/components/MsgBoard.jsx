@@ -2,18 +2,25 @@ const React = require('react');
 const MsgList = require('./MsgList.jsx');
 const NewMsg = require('./NewMsg.jsx');
 const Login = require('./Login.jsx');
+const Registration = require('../../client_side/Registration.jsx');
 
 class MsgBoard extends React.Component {
     constructor(props) {
         super(props);
+
         this.addMessage = this.addMessage.bind(this);
         this.login = this.login.bind(this);
+        this.register = this.register.bind(this);
+
         this.state = {
             messages: this.props.messages,
 
             loginForm: true,
             loginAttempts: 3,
             loginFail: false,
+
+            registrationForm: false,
+            registrationFail: false,
 
             userCredentials: {
                 email: '',
@@ -110,7 +117,29 @@ class MsgBoard extends React.Component {
             });
     }
 
+    register() {
+        console.log('registration button hit');
+        this.setState({
+            registrationForm: true
+        });
+    }
+
     render() {
+        if (this.state.registrationForm) {
+            console.log("registration init");
+            let failedRegistration;
+            if (this.state.registrationFail) {
+                console.log('failed registration');
+                failedRegistration =
+                    <p className="text-danger">User already Registered or Registration Error.</p>
+            }
+            return (
+                <div>
+                <Registration registerNewUserCallback={this.addNewUser}/>
+                    {failedRegistration}
+                </div>
+            )
+    } else {
         let form;
         if (this.state.loginForm) {
             form = <Login registerCallback={this.register}
@@ -129,6 +158,7 @@ class MsgBoard extends React.Component {
             </div>
         );
     }
+}
 }
 
 module.exports = MsgBoard;

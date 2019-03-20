@@ -14,6 +14,7 @@ class Login extends React.Component {
         }
     }
     register(event){
+        console.log('Registration button pushed on login component');
         this.props.registerCallback();
     }
 
@@ -78,7 +79,8 @@ class Login extends React.Component {
 
             <div className="col-8">
                 <p>Not registered?</p>
-                <button type="register" className=" btn btn-primary">
+                <button type="register" className=" btn btn-primary"
+                    onClick={this.register}>
                 Register
             </button>
             </div>
